@@ -25,7 +25,7 @@ Para iniciar con el desarrollo de la práctica, se obtuvo un archivo de una señ
 
   * [PhysioNet Database](https://physionet.org/about/database/)  
 
-El archivo utilizado para el desarrollo de la práctica fue el siguiente: [ecgdata.mat](p_3/ecgdata.mat).
+El archivo utilizado para el desarrollo de la práctica fue el siguiente: [ecgdata.mat](p_3/ecgdata.mat)
 
 ## Configuración y despliegue en Matlab
 
@@ -33,6 +33,7 @@ Una vez descargado nuestro archivo, se guardó en la carpeta de trabajo para abr
 
 <p align="center">
   <img src="imagenes/intro.png" alt="Espacio de trabajo" width="400">
+ <em>Figura 1. Espacio de trabajo.</em>
 </p>
 
 
