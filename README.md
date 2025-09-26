@@ -33,8 +33,8 @@ Una vez descargado nuestro archivo, se guardó en la carpeta de trabajo para abr
 
 <p align="center">
   <img src="imagenes/intro.png" alt="Espacio de trabajo" width="400">  
-  <em>Figura 1. Espacio de trabajo.</em>
 </p>
+<p align="center"><em>Figura 1. Espacio de trabajo</em></p>
 
 
 ## Cuantificación de la señal
