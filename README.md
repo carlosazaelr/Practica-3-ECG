@@ -30,7 +30,7 @@ El archivo utilizado para el desarrollo de la práctica fue el siguiente: [ecgda
 ## Configuración y despliegue en Matlab
 
 Una vez descargado nuestro archivo, se guardó en la carpeta de trabajo para abrirla desde la interfaz de **MATLAB**, tal como se muestra en la siguiente figura.  
-![Señal ECG](imagenes/ecg_signal.jpg)
+![Señal ECG](imagenes/intro.png)
 
 
 ## Cuantificación de la señal
