@@ -25,7 +25,7 @@ Para iniciar con el desarrollo de la práctica, se obtuvo un archivo de una señ
 
   * [PhysioNet Database](https://physionet.org/about/database/)  
 
-El archivo utilizado para el desarrollo de la práctica fue el siguiente:  `load('ecgdata.mat')`.
+El archivo utilizado para el desarrollo de la práctica fue el siguiente: [ecgdata.mat](p_3/ecgdata.mat).
 
 ## Configuración y despliegue en Matlab
 
