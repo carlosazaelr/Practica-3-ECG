@@ -39,6 +39,13 @@ Una vez descargado nuestro archivo, se guardó en la carpeta de trabajo para abr
 Para realizar el despliegue de la figura de la señal ECG original, se utilizaron las siguientes líneas de código:
 
 ```matlab
+% Parámetros de la señal
+Fs = 2000;
+Obits = 16;
+ini = 170; % [s]
+fin = 172; % [s]
+
+% Despliegue de la figura
 figure;
 load ecgdata.mat
 x = ecgdata;
@@ -46,6 +53,15 @@ x = x(Fs*ini:(Fs*fin)-1);
 t = ini:1/Fs:fin-1/Fs;
 plot(t, x);
 ```
+Donde: Fs = Frecuencia de muestreo, Obits = # de bits, ini = Segundo de inicio, fin = Segundo final.
+
+Una vez ejecutado el código, se obtuvo la señal representada en la Figura 2.  
+
+<p align="center">
+  <img src="imagenes/fase2.fig" alt="Espacio de trabajo" width="400">  
+</p>
+<p align="center"><em>Figura 2. Señal ECG original </em></p>
+
 ## Cuantificación de la señal
 
 ## Generación y análisis de fragmentos
