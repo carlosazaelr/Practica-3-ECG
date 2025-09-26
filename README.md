@@ -145,6 +145,19 @@ Para realizar el análisis de resultados, se acomodaron los datos en la siguient
 | 15 (32768)                                             | MB                    | Sin cambios significativos.                                |
 | 16 (65536)                                             | MB                    | La mejor calidad. |
 
+**¿Cuál es la profundidad de bit adecuada para la señal ECG utilizada en esta práctica?**  
+En mi opinión, el valor de 7 en escala de profundidad de bits. En este nivel se captura de una buena manera las formas que se deberían poder identificar hablando de una señal de ECG, siendo un peso en bits bastante menor al de la imagen original. Sin embargo, la señal de profundidad de bit de 1 puede ser útil si solo se desean contabilizar los picos de la señal.
+
 ## Conclusión
 
+En esta práctica se logró familiarizarse con el manejo de señales bioeléctricas de ECG utilizando MATLAB, aplicando etapas fundamentales de procesamiento digital como la **traslación, normalización, amplificación y cuantificación**. Se evidenció cómo cada una de estas etapas afecta la representación y análisis de la señal:
+
+- La **traslación** permitió que todas las muestras de la señal fueran positivas, facilitando su procesamiento posterior.  
+- La **normalización** ajustó la señal a un rango común, haciendo más fácil la comparación entre diferentes fragmentos y señales.  
+- La **amplificación** incrementó la magnitud de la señal hasta el rango completo definido por el número de bits de la adquisición, resaltando detalles importantes.  
+- La **cuantificación**, mediante diferentes niveles de Nbits, mostró cómo la precisión digital afecta la fidelidad de la señal: valores bajos resultan en una representación muy simplificada, mientras que valores mayores permiten conservar la forma de la señal con buena resolución.  
+
+Se concluye que, para la señal ECG utilizada en esta práctica, una **profundidad de 7 bits** proporciona un balance adecuado entre calidad de la señal y eficiencia de almacenamiento, capturando los picos y las características esenciales de la señal sin generar un exceso de datos. Además, se observó que profundidades de bit menores pueden ser útiles para aplicaciones específicas como la detección de picos, mientras que profundidades mayores no ofrecen mejoras significativas perceptibles en la señal.  
+
+En general, esta práctica permitió comprender la importancia de cada etapa del procesamiento de señales bioeléctricas y cómo las decisiones de cuantificación impactan directamente en el análisis y la interpretación de datos biomédicos.
 
