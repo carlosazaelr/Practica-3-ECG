@@ -19,7 +19,13 @@ En esta práctica se trabajará con el procesamiento digital de señales de ECG 
 
 ## Descarga/Adquisición de datos
 
+Para iniciar con el desarrollo de la práctica, se obtuvo un archivo de una señal de ECG desde una base de datos en línea. La base de datos en cuestión fue la siguiente:
 
+* **Señal de electrocardiograma (ECG)**. Utilizar una señal de la base de datos que se desee. Por ejemplo:
+
+  * [PhysioNet Database](https://physionet.org/about/database/)  
+
+El archivo utilizado para el desarrollo de la práctica fue el siguiente:  `load('ecgdata.mat')`.
 
 ## Configuración y despliegue en Matlab
 
