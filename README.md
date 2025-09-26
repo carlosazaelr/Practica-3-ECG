@@ -8,3 +8,13 @@ Ramirez Rodriguez Carlos Azael
 22212267  
 
 ## Introducción
+
+El estudio de las señales bioeléctricas constituye una de las bases fundamentales en el análisis de sistemas biomédicos, ya que permite comprender el comportamiento fisiológico del cuerpo humano a través de la actividad eléctrica de diferentes órganos. Entre estas señales, la señal electrocardiográfica (ECG) es una de las más relevantes, pues refleja la actividad eléctrica del corazón y proporciona información esencial para el diagnóstico y monitoreo de patologías cardiovasculares.
+
+En esta práctica se trabajará con el procesamiento digital de señales de ECG empleando **MATLAB** como herramienta de análisis. El enfoque principal estará en tres etapas fundamentales del tratamiento de señales:
+
+- **Normalización**: permite ajustar la amplitud de la señal a un rango predefinido, lo cual facilita su comparación, almacenamiento y posterior procesamiento.
+- **Amplificación**: mejora la visibilidad de la señal, resaltando componentes de interés que de otra forma serían difíciles de analizar debido a su baja magnitud.
+- **Cuantificación**: consiste en representar la señal continua en niveles discretos de amplitud, emulando el proceso realizado en los sistemas de adquisición mediante convertidores analógico-digitales (ADC).
+
+
