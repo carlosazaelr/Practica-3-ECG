@@ -31,12 +31,9 @@ El archivo utilizado para el desarrollo de la práctica fue el siguiente: [ecgda
 
 Una vez descargado nuestro archivo, se guardó en la carpeta de trabajo para abrirla desde la interfaz de **MATLAB**, tal como se muestra en la siguiente figura.  
 
-```html
 <p align="center">
   <img src="imagenes/intro.png" alt="Espacio de trabajo" width="400">
 </p>
-
-```
 
 
 ## Cuantificación de la señal
