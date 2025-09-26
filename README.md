@@ -34,9 +34,18 @@ Una vez descargado nuestro archivo, se guardó en la carpeta de trabajo para abr
 <p align="center">
   <img src="imagenes/intro.png" alt="Espacio de trabajo" width="400">  
 </p>
-<p align="center"><em>Figura 1. Espacio de trabajo</em></p>
+<p align="center"><em>Figura 1. Espacio de trabajo</em></p>  
 
+Para realizar el despliegue de la figura de la señal ECG original, se utilizaron las siguientes líneas de código:
 
+```matlab
+figure;
+load ecgdata.mat
+x = ecgdata;
+x = x(Fs*ini:(Fs*fin)-1);
+t = ini:1/Fs:fin-1/Fs;
+plot(t, x);
+```
 ## Cuantificación de la señal
 
 ## Generación y análisis de fragmentos
