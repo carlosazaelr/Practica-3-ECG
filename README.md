@@ -62,11 +62,88 @@ Una vez ejecutado el código, se obtuvo la señal representada en la Figura 2.
 </p>
 <p align="center"><em>Figura 2. Señal ECG original </em></p>
 
+En orden para preparar la señal para su posterior cuantificación, se necesita trasladar, normalizar y amplificar. Para ello, se utilizó la siguiente sección de código.
+
+```matlab
+% Trasladar
+x_t = x + abs(min(x));
+
+% Normalizar
+x_n = x_t / max(x_t);
+
+% Amplificar
+x_a = x_n * 2^Obits-1;
+```
+Una vez ejecutado, se expresó este proceso en una serie de gráficos, la cual se puede observar en la Figura 3.
+
+<p align="center">
+  <img src="imagenes/fase2.jpg" alt="ECG amplificada" width="800">  
+</p>
+<p align="center"><em>Figura 3. Señal ECG trasladada, normalizada y amplificada </em></p>
+
 ## Cuantificación de la señal
+
+Para este paso, se definió una función de nombre **cuantificador**, la cual tendrá como entradas `Xin` (Señal de entrada en forma de vector), `Nbits` (Número de bits del cuantificador) y `Obtis` (Número de bits de la señal). La función correspondiente se definió de la siguiente forma:
+
+```matlab
+function Yout = cuantificador_3(Xin, Nbits, Obits)
+    P = (2^Obits/(2^Nbits))-1 : 2^Obits/(2^Nbits) : 2^Obits-1;
+    Yout = quantiz (Xin,P);
+end
+```
 
 ## Generación y análisis de fragmentos
 
+Para esta sección del desarrollo, se siguieron los siguientes puntos:
+1. Elegir un fragmento de la señal de entre **2 y 4 segundos** para el análisis.
+2. Generar varias versiones de la señal de ECG original usando diferentes valores de `Nbits`.
+3. Desplegar de manera simultánea la señal original y las señales cuantificadas (utilizar el comando `subplot`) y comparar los resultados.
+4. Explicar cómo afectan los diferentes valores del parámetro `Nbits`.
+
+Para ello, se utilizaron las siguientes instrucciones:
+
+```matlab
+figure;
+for n = 1: 1 :Obits
+    subplot(4,4,n);
+    x_c = cuantificador_3(x_a,n,Obits);
+    plot(t,x_c)
+    title(strcat(num2str(n),'-bit'))
+    xlabel('Tiempo');
+    ylabel('Amplitud');
+    xlim([ini fin]);
+end
+```
+
+Al ejecutar el ciclo del listado anterior, se obtiene un mosaico como el de la Figura 4.
+
+<p align="center">
+  <img src="imagenes/fase3.jpg" alt="ECG mosaico" width="800">  
+</p>
+<p align="center"><em>Figura 4. Señal ECG cuantificada a diferentes valores de Nbits </em></p>
+
 ## Análisis de resultados
+
+Para realizar el análisis de resultados, se acomodaron los datos en la siguiente tabla, junto a las observaciones pertinentes.
+
+| Profundidad de bit ó Nbits (niveles de cuantificación) | Calidad (MB/B/R/M/MM) | Observaciones                    |
+| ------------------------------------------------------ | --------------------- | -------------------------------- |
+| 1 (2)                                                  | MM                    | La señal toma únicamene valores de 0 o 1, lo cual no nos deja apreciar bien su forma, pero funciona como un detector de picos. |
+| 2 (4)                                                  | MM                    | Igual que en el nivel anterior, pero se logra apreciar la forma de los picos. |
+| 3 (8)                                                  | MM                    | Al igual que el nivel anterior, con la diferencia de que apenas se alcanzan a notar los niveles inferiores de la señal.                                |
+| 4 (16)                                                 | MM                    | Se puede empezar a distinguir la forma de la señal pero con una muy baja calidad.                                |
+| 5 (32)                                                 | M                     | Un poco mejor que el nivel anterior, aunque aún se nota la pérdida de datos.                                |
+| 6 (64)                                                 | M                     | Igual que en el caso anterior con una cierta mejora.                                |
+| 7 (128)                                                | R                     | El mejor nivel en cuanto a calidad y peso en bits.                                |
+| 8 (256)                                                | R                     | Cierta mejora con respecto al anterior.                                |
+| 9 (512)                                                | B                     | Se puede apreciar una imagen más limpia.                                |
+| 10 (1024)                                              | B                     | Poco cambio con respecto a la anterior                                |
+| 11 (2048)                                              | MB                    | Imagen muy similar a la original.                                |
+| 12 (4096)                                              | MB                    | Sin cambios significativos.                                |
+| 13 (8192)                                              | MB                    | Sin cambios significativos.                                |
+| 14 (16384)                                             | MB                    | Sin cambios significativos.                                |
+| 15 (32768)                                             | MB                    | Sin cambios significativos.                                |
+| 16 (65536)                                             | MB                    | La mejor calidad. |
 
 ## Conclusión
 
