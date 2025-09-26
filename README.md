@@ -17,4 +17,14 @@ En esta práctica se trabajará con el procesamiento digital de señales de ECG 
 - **Amplificación**: mejora la visibilidad de la señal, resaltando componentes de interés que de otra forma serían difíciles de analizar debido a su baja magnitud.
 - **Cuantificación**: consiste en representar la señal continua en niveles discretos de amplitud, emulando el proceso realizado en los sistemas de adquisición mediante convertidores analógico-digitales (ADC).
 
+## Descarga/Adquisición de datos
 
+
+
+## Configuración y despliegue en Matlab
+
+## Cuantificación de la señal
+
+## Generación y análisis de fragmentos
+
+## Tabla de resultados
