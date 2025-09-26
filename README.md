@@ -58,7 +58,7 @@ Donde: Fs = Frecuencia de muestreo, Obits = # de bits, ini = Segundo de inicio, 
 Una vez ejecutado el código, se obtuvo la señal representada en la Figura 2.  
 
 <p align="center">
-  <img src="imagenes/fase2.fig" alt="Espacio de trabajo" width="400">  
+  <img src="imagenes/original.jpg" alt="ECG original" width="800">  
 </p>
 <p align="center"><em>Figura 2. Señal ECG original </em></p>
 
