@@ -1,2 +1,2 @@
-# Pr-ctica-3-Introducci-n-al-manejo-de-se-ales-biom-dicas-Se-al-de-ECG
+# Práctica-3-Introducción-al-manejo-de-señales-biomédicas-Señal-de-ECG
 Telesalud y Telemedicina
