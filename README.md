@@ -27,4 +27,8 @@ En esta práctica se trabajará con el procesamiento digital de señales de ECG 
 
 ## Generación y análisis de fragmentos
 
-## Tabla de resultados
+## Análisis de resultados
+
+## Conclusión
+
+
